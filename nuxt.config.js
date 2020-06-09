@@ -1,85 +1,108 @@
-import pkg from './package'
-import info from './content/setup/info'
-import path from 'path'
-import glob from 'glob'
+var siteInfo = require('./content/setup/info.json');
+console.log(siteInfo)
+var glob = require('glob');
+var path = require('path');
 
+// Enhance Nuxt's generate process by gathering all content files from Netifly CMS
+// automatically and match it to the path of your Nuxt routes.
+// The Nuxt routes are generate by Nuxt automatically based on the pages folder.
 var dynamicRoutes = getDynamicPaths({
-  '/blog': 'blog/*.json',
-  '/page': 'page/*.json',
+  '/blog': 'blog/posts/*.json',
+  '/page': 'page/posts/*.json',
+  '/category': 'categories/posts/*.json',
+  '/tagged': 'tags/posts/*.json'
 });
 
-console.log(dynamicRoutes);
 
-export default {
-  mode: 'universal',
-
+module.exports = {
+  mode: "universal",
   /*
   ** Headers of the page
   */
+transition: { mode: "in-out"},
+env: {
+  API_URL: process.env.API_URL,
+},
   head: {
-    title: info.sitename,
+    title: siteInfo.sitename,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: siteInfo.sitedescription }
+
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Archivo+Black' }
     ]
   },
-
+  css: ["@/assets/grid.css","bf-solid/dist/solid.latest.css"],
+  // icon: {
+  //   iconSrc: `${siteInfo.siteicon}`
+  //  },
   /*
-  ** Customize the progress-bar color
+  ** Customize the progress bar color
   */
-  loading: { color: '#fff' },
-
-  /*
-  ** Global CSS
-  */
-  css: [
-  ],
-
-  /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-  ],
-
-  /*
-  ** Nuxt.js modules
-  */
-  modules: [
-    '@nuxtjs/markdownit',
-    '@nuxtjs/axios', // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/pwa',
-  ],
+  loading: { color: '#3B8070' },
+  modules: ['@nuxtjs/markdownit', '@nuxtjs/pwa','@nuxtjs/axios'],
   markdownit: {
     injected: true,
     preset: 'default',
     breaks: true,
     html: true
 
-
+    
   },
+  manifest: {
+    name: siteInfo.sitename,
+    short_name: siteInfo.sitename,
+    description: siteInfo.sitedescription,
+    lang: 'en'
+  },
+  workbox: {
+    runtimeCaching: [
+      {
+        urlPattern: '/images/uploads/.*',
+        handler: 'cacheFirst',
+        strategyOptions: {
+          cacheName: 'image-cache',
+          cacheExpiration: {
+            maxEntries: 100,
+            maxAgeSeconds: 86400
+          }
+        }
+      }
+    ]
+  },
+
   /*
-  ** Axios module configuration
+  ** Route config for pre-rendering
   */
-  axios: {
-    // See https://github.com/nuxt-community/axios-module#options
+ router: {
+  scrollBehavior: function (to, from, savedPosition) {
+    return { x: 0, y: 0 }
   },
-
+middleware: ['title']
+ },
+  generate: {
+    routes: dynamicRoutes
+  },
+  plugins: ['~/plugins/vuefuse',{
+    src: "~/plugins/moment",
+    ssr: false
+  },{
+    src: "~/plugins/lazyload",
+    ssr: false
+  }],
   /*
   ** Build configuration
   */
   build: {
+    extractCSS: true
     /*
-    ** You can extend webpack config here
+    ** Run ESLint on save
     */
-    extend(config, ctx) {
-    },
-  },
-  generate: {
-    routes: dynamicRoutes
+
   }
 }
 

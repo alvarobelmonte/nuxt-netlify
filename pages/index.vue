@@ -1,46 +1,69 @@
-<template lang="html">
-  <div class="main">
-    <div class="main-header">
-      <h1>{{siteInfo.sitename}}</h1>
-      <p>{{siteInfo.sitedescription}}</p>
-    </div>
-    <div class="posts-list">
-      <h2 class="posts-list-title">Posts</h2>
-      <p class="post-link" v-for="post in blogPosts"><n-link :to="post._path">{{post.title}}</n-link></p>
-    </div>
-  </div>
+<template>
+
+    <component :is="getLayout" :allitems="allBlogPosts"></component>
 </template>
 
 <script>
+import BaelGrid from "~/components/BaelGrid";
+import FullGrid from "~/components/FullGrid";
 export default {
+    watchQuery: ['page'],
+
+   transition (to, from) {
+     
+    if (!from) return 'fade'
+    return +to.query.page > +from.query.page ? 'slide-right' : 'slide-left'
+  },
+  name: "Index",
+  components: { BaelGrid,FullGrid },
+  data() {
+    return {};
+  },
+  methods: {},
+
   computed: {
-    blogPosts() {
+    allBlogPosts() {
       return this.$store.state.blogPosts;
     },
-    siteInfo() {
-      return this.$store.state.siteInfo;
+    getLayout() {
+if (this.$store.state.siteInfo.altlayout == false ) {
+  return 'BaelGrid'
+} else if (this.$store.state.siteInfo.altlayout == true ) {
+  return 'FullGrid'
+}
+
     }
   }
-}
+};
 </script>
 
-<style lang="css" scoped>
-.posts-list {
+<style>
+
+.browse a {
   width: 100%;
-  background-color: whitesmoke;
-  padding: 20px;
-  margin-top: 35px;
 }
-.post-link {
-  padding-top: 10px;
+.search:focus {
+  outline: none;
 }
-.main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+.footer__heading {
+  text-transform: uppercase;
 }
-.main-header {
-  text-align: center;
+nav .r {
+  grid-gap: 0;
+}
+.r.full-height {
+  grid-gap: 0;
+}
+@media only screen and (max-width: 40rem) {
+  .xs-collapse {
+    visibility: hidden;
+    visibility: collapse;
+    border: 0 !important;
+    border-color: none !important;
+    padding: 0 !important;
+  }
+  .xs-visible {
+    visibility: visible;
+  }
 }
 </style>

@@ -1,13 +1,47 @@
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/tylermercer/nuxt-netlifycms-boilerplate)
+# Bael Netlify CMS Template
 
-Live demo [here](https://nuxt-netlifycms-boilerplate.netlify.com/).
+![Bael](https://i.imgur.com/e1zmiB2.jpg "Bael CMS Blog Template")
 
-I wanted to build a website with [NetlifyCMS](https://www.netlifycms.org/) and [Nuxt](https://nuxtjs.org/) but couldn't find any simple, well-documented templates that worked with the latest version of Nuxt, so I built my own! I hope you find it useful. 🙂
+> Bael is a free template that gives you an easy way to start a blog that uses modern technologies like static-site JAMstack architecture, CSS grid layout, responsive design, and fuzzy search — all wrapped up in a brutalist aesthetic.
 
-Many thanks to [Jake 101](https://jake101.com/), whose [Bael Template](https://github.com/jake-101/bael-template) served as a useful reference point as I built this.
+## Info
 
-**To-Do:**
+Bael runs using [Nuxt.js](https://nuxtjs.org), [Vue.js](https://vuejs.org), [Netlify CMS](https://netlifycms.org), and is hosted by [Netlify](https://netlify.com). Bael requires an account with Netlify and Github/Bitbucket to deploy. Made by [Jake 101](https://jake101.com)
 
-* Add examples for the "Page" content type
-* Add an example of using dynamic layouts in Nuxt, e.g. a dedicated layout for mobile
-* Add an example of using Netlify-enabled forms
+## Deploy to Netlify
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/jake-101/bael-template)
+
+
+## Build Setup
+
+``` bash
+# install dependencies
+$ npm install # Or yarn install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm start
+
+# generate static project
+$ npm run generate
+```
+
+## Edit content
+
+Access `yourwebsite.com/admin`, e.g. `localhost:3000/admin`.
+
+## Manage dynamic routes
+
+When you use Netlify CMS' `folder` type, you actually create dynamic routes. For example, when creating a blog,
+you render different content files with the same template. And for the blog to know which content to render,
+it looks at the url and gets the specific content file. That's a dynamic route.
+
+So If you create a `folder` type with Netlify CMS, add the folder as glob to the `dynamicRoutes` variable
+in the `nuxt.config.js`.
+
+MIT License
+
