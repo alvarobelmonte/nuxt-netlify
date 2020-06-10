@@ -8,6 +8,7 @@ const createStore = () =>
       menuIsActive: false,
       menuInitial: true,
       blogPosts: [],
+      projectPosts: [],
       allPages: [],
       navheight: 60,
       blogTitle: '',
@@ -30,6 +31,7 @@ const createStore = () =>
       async nuxtServerInit({ dispatch }) {
         await dispatch('getSiteInfo')
         await dispatch('getBlogPosts')
+        await dispatch('getProjectPosts')
         await dispatch('getPages')
         await dispatch('getCats')
       },
@@ -44,6 +46,19 @@ const createStore = () =>
 
 
         commit('SET_POSTS', searchposts.reverse())
+
+      },
+      async getProjectPosts({ state, commit }) {
+        const context = await require.context('~/content/project/posts/', false, /\.json$/);
+
+        const searchposts = await context.keys().map(key => ({
+          ...context(key),
+          _path: `/project/${key.replace('.json', '').replace('./', '')}`
+        }));
+
+
+
+        commit('SET_PROJECTS', searchposts.reverse())
 
       },
       async getPages({ state, commit }) {
@@ -117,6 +132,9 @@ const createStore = () =>
     mutations: {
       SET_POSTS(state, data) {
         state.blogPosts = data
+      },
+      SET_PROJECTS(state, data) {
+        state.projectPosts = data
       },
       SET_PAGES(state, data) {
         state.allPages = data
