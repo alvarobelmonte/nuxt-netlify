@@ -1,6 +1,6 @@
 <template>
 
-    <component :is="getLayout" :allitems="allBlogPosts"></component>
+    <component :is="getLayout" :allitems="allProjectPosts"></component>
 </template>
 
 <script>
@@ -24,6 +24,9 @@ export default {
   computed: {
     allBlogPosts() {
       return this.$store.state.blogPosts;
+    },
+    allProjectPosts() {
+      return this.$store.state.projectPosts;
     },
     getLayout() {
 if (this.$store.state.siteInfo.altlayout == false ) {
