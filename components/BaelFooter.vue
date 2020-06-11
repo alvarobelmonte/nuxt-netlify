@@ -1,5 +1,5 @@
 <template>
-<footer class="bg-black text-white xs-text-6 md-text-5 pt-6 pb-6">
+<footer class="xs-text-6 md-text-5 pt-6 pb-6">
     <div class="r no-gap">
 
         <div class="xs-text-left xs-p2 xs-border" :class="signupAboutSize">
@@ -104,6 +104,10 @@ export default {
 </script>
 
 <style scoped>
+footer {
+    background-color: black;
+    color: white;
+}
 .text-input {
     max-width: 100%;
 }

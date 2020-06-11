@@ -1,6 +1,15 @@
 <template>
 
-    <component :is="getLayout" :allitems="allBlogPosts"></component>
+    <!--<component :is="getLayout" :allitems="allBlogPosts"></component> -->
+    <div class="main-content">
+        <div class="bg-video">
+            <video class="bg-video__content" poster="~/static/images/mine/frame.jpg" autoplay muted loop>
+              <source src="~/static/images/mine/video.webm" type="video/webm"> Your browser is not supported
+            </video>
+        </div>
+      <h1>PORTFOLIO</h1>
+    </div>
+
 </template>
 
 <script>
@@ -40,7 +49,43 @@ if (this.$store.state.siteInfo.altlayout == false ) {
 };
 </script>
 
-<style>
+<style lang="scss">
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.65;
+  overflow: hidden;
+  display: none;
+  visibility: hidden;
+  &__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+}
+
+.main-content {
+  min-width: 100vw;
+  min-height: 100vh;
+  padding-top: 5rem;;
+}
+
+.video {
+    background-image: linear-gradient(
+    to right bottom,
+    rgba(blue, 0.5),
+    rgba(purple, 0.5)
+  );
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+
 
 .browse a {
   width: 100%;
