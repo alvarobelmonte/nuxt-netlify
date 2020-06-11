@@ -1,5 +1,5 @@
 <template>
-  <nav ref="navBar" id="navbar" class="sm-border-bottom">
+  <nav ref="navBar" id="navbar" class="">
     <div class="r">
 
       <div class="c-4 xs-text-left xs-p2 flex flex-sitename">
@@ -102,13 +102,12 @@ export default {
   margin: 0 0.5rem;
 }
 .social-icon {
-  fill: black;
+  fill: white;
   width: 3rem;
   transition: all 0.4s;
 }
 
 .social-icon:hover {
-  fill: #0D3CFE;
   transform: scale(1.25);
 }
 
@@ -138,14 +137,15 @@ export default {
   margin-left: 0;
 }
 nav {
+  padding-top: 1rem;
   position: fixed;
-  background: white;
+  background: transparent;
   top: 0;
   left: 0;
   right: 0;
 }
 .sitename {
-  color: #000;
+  color: white;
   font-family: "Archivo Black", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
@@ -160,4 +160,5 @@ nav {
     width: 94vw;
   }
 }
+
 </style>

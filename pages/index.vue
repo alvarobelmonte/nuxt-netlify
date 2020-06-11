@@ -51,16 +51,18 @@ if (this.$store.state.siteInfo.altlayout == false ) {
 
 <style lang="scss">
 .bg-video {
+
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: -1;
+  /*z-index: -1;
   opacity: 0.65;
   overflow: hidden;
   display: none;
-  visibility: hidden;
+  visibility: hidden;*/
+  opacity: 0.65;
   &__content {
     height: 100%;
     width: 100%;
@@ -72,7 +74,15 @@ if (this.$store.state.siteInfo.altlayout == false ) {
 .main-content {
   min-width: 100vw;
   min-height: 100vh;
-  padding-top: 5rem;;
+  padding-top: 10rem;
+
+  position: relative;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(blue, 0.5),
+    rgba(green, 0.5)
+  );
+
 }
 
 .video {
@@ -85,6 +95,9 @@ if (this.$store.state.siteInfo.altlayout == false ) {
   min-height: 100vh;
 }
 
+h1 {
+  color: white;
+}
 
 
 .browse a {
