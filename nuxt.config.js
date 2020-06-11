@@ -45,12 +45,7 @@ env: {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
-  modules: ['@nuxtjs/markdownit', '@nuxtjs/pwa','@nuxtjs/axios', '@nuxtjs/tailwindcss'],
-  tailwindcss: {
-    configPath: '~/config/tailwind.config.js',
-    cssPath: '~/assets/css/tailwind.css',
-    exposeConfig: false
-  },
+  modules: ['@nuxtjs/markdownit', '@nuxtjs/pwa','@nuxtjs/axios'],
   markdownit: {
     injected: true,
     preset: 'default',

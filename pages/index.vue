@@ -1,6 +1,6 @@
 <template>
 
-    <component :is="getLayout" :allitems="allProjectPosts"></component>
+    <component :is="getLayout" :allitems="allBlogPosts"></component>
 </template>
 
 <script>

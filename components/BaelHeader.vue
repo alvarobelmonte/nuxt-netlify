@@ -9,8 +9,10 @@
       </div>
 
       <div class="c-4 xs-border-top xs-border-bottom sm-border-top-none sm-border-bottom-none sm-border-left sm-border-right xs-p2">
-        <div class="item xs-flex">
-          <VueFuse placeholder="Search" :compResults="compResults" :keys="keys" :list="allPosts" event-name="searchChanged" />
+        <div class="item xs-flex flex align-center justify-center">
+          <div class="bg-red-300">linkedin</div>
+          <div class="bg-blue-300">github</div>
+          <div class="bg-green-300">codepen</div>
         </div>
 
       </div>
