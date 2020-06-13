@@ -31,7 +31,13 @@ collections:
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "dddd MMMM Do, YYYY"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
-      - {label: "technology", name: "technology", widget: "relation", collection: "technologies", searchFields: ["technology"], valueField: "technology", displayFields: ["technology"], multiple: true, required: false}
+      - label: "Technology"
+        name: "technology"
+        widget: "relation"
+        collection: "technologies"
+        searchFields: ["technology"]
+        valueField: "technology"
+        multiple: true
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "tech" # Used in routes, e.g., /admin/collections/blog
     label: "Technology" # Used in the UI
