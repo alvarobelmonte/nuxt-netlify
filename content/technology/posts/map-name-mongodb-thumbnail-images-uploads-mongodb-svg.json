@@ -1,4 +1,5 @@
 {
   "name": "MongoDB",
-  "thumbnail": "/images/uploads/mongodb.svg"
+  "thumbnail": "/images/uploads/mongodb.svg",
+  "technology": "MongoDB"
 }
