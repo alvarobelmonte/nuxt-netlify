@@ -1,4 +1,5 @@
 {
   "name": "Tailwind",
-  "thumbnail": "/images/uploads/tailwind.svg"
+  "thumbnail": "/images/uploads/tailwind.svg",
+  "technology": "Tailwind"
 }
