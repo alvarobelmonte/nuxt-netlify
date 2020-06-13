@@ -36,7 +36,7 @@ collections:
         widget: "relation"
         collection: "technologies"
         searchFields: ["technology"]
-        valueField: "technology"
+        valueField: slug
         multiple: true
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "tech" # Used in routes, e.g., /admin/collections/blog
