@@ -12,11 +12,13 @@
     <section class="portfolio">
         <h1>PORTFOLIO</h1>
         <div class="card" v-for="project in allProjectPosts">
-            <p>{{project.title}}</p>
+          <div class="thumbnail">
+            <transition appear name="fade"><img class="thumbnail featured-image" :src="project.thumbnail" :alt="title"></transition>
+          </div>
+          <div class="info">
+            <h2 class="title">{{project.title}}</h2>
             <p>{{project.description}}</p>
-            <div>
-              <transition appear name="fade"><img class="featured-image" :src="project.thumbnail" :alt="title"></transition>
-            </div>
+          </div>
         </div>
     </section>
 
@@ -108,6 +110,7 @@ if (this.$store.state.siteInfo.altlayout == false ) {
 
 .portfolio {
   padding-top: 3rem;
+  padding-bottom: 5rem;
   h1 {
     text-align: center; 
     font-size: 3rem;
@@ -117,8 +120,21 @@ if (this.$store.state.siteInfo.altlayout == false ) {
 }
 
 .card {
+  background-color: rgb(189, 189, 189);
+  height: 25rem;
+  border-radius: 3rem;
   width: 50%;
-  margin: 0 auto;
+  margin: 2rem auto;
+  display: flex;
+
+  .thumbnail {
+    flex: 50%;
+  }
+
+  .info {
+    padding: 4rem 3rem;
+    flex: 50%;
+  }
 }
 
 
