@@ -1,4 +1,5 @@
 {
   "name": "Apollo",
-  "thumbnail": "/images/uploads/apollo.svg"
+  "thumbnail": "/images/uploads/apollo.svg",
+  "technology": "Apollo"
 }
