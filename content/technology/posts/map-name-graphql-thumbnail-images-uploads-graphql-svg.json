@@ -1,4 +1,5 @@
 {
   "name": "GraphQL",
-  "thumbnail": "/images/uploads/graphql.svg"
+  "thumbnail": "/images/uploads/graphql.svg",
+  "technology": "GraphQL"
 }
