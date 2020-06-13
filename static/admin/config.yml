@@ -38,6 +38,7 @@ collections:
         searchFields: ["technology"]
         valueField: "slug"
         multiple: true
+        required: false
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "tech" # Used in routes, e.g., /admin/collections/blog
     label: "Technology" # Used in the UI
