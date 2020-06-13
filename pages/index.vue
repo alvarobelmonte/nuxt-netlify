@@ -1,5 +1,5 @@
 <template>
-
+    <main>
     <!--<component :is="getLayout" :allitems="allBlogPosts"></component> -->
     <div class="main-content">
         <div class="bg-video">
@@ -7,9 +7,20 @@
               <source src="~/static/images/mine/video.webm" type="video/webm"> Your browser is not supported
             </video>
         </div>
-      <h1>PORTFOLIO</h1>
-    </div>
 
+    </div>
+    <section class="portfolio">
+        <h1>PORTFOLIO</h1>
+        <div class="card" v-for="project in allProjectPosts">
+            <p>{{project.title}}</p>
+            <p>{{project.description}}</p>
+            <div>
+              <transition appear name="fade"><img class="featured-image" :src="project.thumbnail" :alt="title"></transition>
+            </div>
+        </div>
+    </section>
+
+    </main>
 </template>
 
 <script>
@@ -73,7 +84,7 @@ if (this.$store.state.siteInfo.altlayout == false ) {
 
 .main-content {
   min-width: 100vw;
-  min-height: 100vh;
+  min-height: 75vh;
   padding-top: 10rem;
 
   position: relative;
@@ -95,9 +106,22 @@ if (this.$store.state.siteInfo.altlayout == false ) {
   min-height: 100vh;
 }
 
-h1 {
-  color: white;
+.portfolio {
+  padding-top: 3rem;
+  h1 {
+    text-align: center; 
+    font-size: 3rem;
+    font-family: 'Space Mono', monospace;
+    padding: 1rem;
+  }
 }
+
+.card {
+  width: 50%;
+  margin: 0 auto;
+}
+
+
 
 
 .browse a {

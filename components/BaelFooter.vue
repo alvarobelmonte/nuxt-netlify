@@ -20,7 +20,6 @@
 
 <script>
 export default {
-    props: ["pagination"],
     watchQuery: ['page'],
     data() {
         return {

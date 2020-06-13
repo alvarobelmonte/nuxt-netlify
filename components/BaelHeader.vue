@@ -139,7 +139,7 @@ export default {
 nav {
   padding-top: 1rem;
   position: fixed;
-  background: transparent;
+  background: black;
   top: 0;
   left: 0;
   right: 0;

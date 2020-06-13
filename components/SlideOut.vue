@@ -118,7 +118,7 @@ export default {
 .hamburger-inner::after {
   width: 40px;
   height: 4px;
-  background-color: #000;
+  background-color: white;
   border-radius: 4px;
   position: absolute;
   transition-property: transform;
@@ -192,7 +192,7 @@ export default {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #000;
+  color: white;
   cursor: pointer;
 
   &:hover {

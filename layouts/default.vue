@@ -4,7 +4,7 @@
     <BaelHeader :blogtitle="blogtitle" :thecrumb="this.$store.state.theCrumb" :posts="blogposts" />
     <nuxt/>
     <SlideOut/>
-    <BaelFooter :pagination="paginate" />
+    <BaelFooter/>
   </section>
 </template>
 <script>
@@ -47,9 +47,6 @@ export default {
     }
   },
   computed: {
-    paginate() {
-return this.$store.state.pagination
-    },
     blogposts() {
       return this.$store.state.blogPosts;
     },
