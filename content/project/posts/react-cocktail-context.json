@@ -6,5 +6,7 @@
   "body": "a demo",
   "technology": [
     "map-name-react-thumbnail-images-uploads-react-svg"
-  ]
+  ],
+  "source": "https://github.com/alvarobelmonte/react-cocktail-context",
+  "demo": "https://polar-scrubland-44886.herokuapp.com/"
 }
