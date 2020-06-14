@@ -13,7 +13,7 @@
         <h1>PORTFOLIO</h1>
         <div class="card" v-for="project in allProjectPosts">
           <div class="thumbnail">
-            <transition appear name="fade"><img class="thumbnail featured-image" :src="project.thumbnail" :alt="title"></transition>
+            <!--<transition appear name="fade"><img class="thumbnail featured-image" :src="project.thumbnail" :alt="title"></transition>-->
           </div>
           <div class="info">
             <h2 class="title">{{project.title}}</h2>
@@ -120,24 +120,39 @@ if (this.$store.state.siteInfo.altlayout == false ) {
 }
 
 .card {
-  background-color: rgb(189, 189, 189);
+  background-color:white;
   height: 25rem;
   border-radius: 3rem;
   width: 50%;
   margin: 2rem auto;
   display: flex;
+  overflow: hidden;
+
+  transition: all 0.3s;
+
+  -webkit-box-shadow: 0 2rem 5rem rgba(0,0,0,.1);
+  -moz-box-shadow: 0 2rem 5rem rgba(0,0,0,.1);
+  box-shadow: 0 2rem 5rem rgba(0,0,0,.1);
 
   .thumbnail {
     flex: 50%;
+    background-image: url("https://www.lasnaves.com/wp-content/uploads/2015/07/React.js_logo.svg_.png");
+    background-size: contain;
+
   }
 
   .info {
     padding: 4rem 3rem;
     flex: 50%;
   }
+
+
 }
 
-
+.card:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
 
 
 .browse a {
