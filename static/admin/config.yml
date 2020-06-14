@@ -37,7 +37,7 @@ collections:
          collection: "technology",
          searchFields: ["technology"],
          displayFields: ["technology"],
-         valueField: "technology",
+         valueField: "thumbnail",
          multiple: true,
          required: false}
       - {label: "Body", name: "body", widget: "markdown"}
