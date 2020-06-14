@@ -34,14 +34,14 @@ collections:
       - {label: "Technology",
          name: "technology",
          widget: "relation",
-         collection: "technologies",
+         collection: "technology",
          searchFields: ["technology"],
          displayFields: ["technology"],
          valueField: "{{slug}}",
          multiple: true,
          required: false}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "tech" # Used in routes, e.g., /admin/collections/blog
+  - name: "technology" # Used in routes, e.g., /admin/collections/blog
     label: "Technology" # Used in the UI
     folder: "content/technology/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
