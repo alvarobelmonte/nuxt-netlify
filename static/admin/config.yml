@@ -36,7 +36,8 @@ collections:
          widget: "relation",
          collection: "technologies",
          searchFields: ["technology"],
-         valueField: "slug",
+         displayFields: ["technology"],
+         valueField: "{{slug}}",
          multiple: true,
          required: false}
       - {label: "Body", name: "body", widget: "markdown"}
