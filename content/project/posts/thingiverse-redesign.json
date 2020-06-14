@@ -3,5 +3,10 @@
   "title": "Thingiverse redesign",
   "description": "Thingiverse redesign bro",
   "thumbnail": "/images/uploads/thingiverse.png",
-  "body": "react, graphql"
+  "body": "react, graphql",
+  "technology": [
+    "map-name-graphql-thumbnail-images-uploads-graphql-svg",
+    "map-name-apollo-thumbnail-images-uploads-apollo-svg",
+    "map-name-react-thumbnail-images-uploads-react-svg"
+  ]
 }
