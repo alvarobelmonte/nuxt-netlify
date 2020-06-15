@@ -39,7 +39,7 @@ collections:
          collection: "technology",
          searchFields: ["technology"],
          displayFields: ["technology"],
-         valueField: "thumbnail",
+         valueField: "technology.thumbnail",
          multiple: true,
          required: false}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -52,7 +52,7 @@ collections:
     identifier_field: technology
     fields: # The fields for each document, usually in front matter
       - {label: "Technology", name: "technology", widget: "string"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: true}
   - name: "page" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
     folder: "content/page/posts" # The path to the folder where the documents are stored
