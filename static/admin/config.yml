@@ -33,8 +33,8 @@ collections:
       - {label: "Demo", name: "demo", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "dddd MMMM Do, YYYY"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
-      - {label: "Technology",
-         name: "technology",
+      - {label: "Technologies",
+         name: "technologies",
          widget: "relation",
          collection: "technology",
          searchFields: ["technology"],
