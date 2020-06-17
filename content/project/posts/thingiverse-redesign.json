@@ -4,9 +4,7 @@
   "description": "Thingiverse redesign bro",
   "thumbnail": "/images/uploads/thingiverse.png",
   "body": "react, graphql",
-  "technology": [
-    ""
-  ],
+  "technology": [],
   "source": "asd",
   "demo": "asd"
 }
