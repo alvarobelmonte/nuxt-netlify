@@ -13,11 +13,21 @@
         <h1>PORTFOLIO</h1>
         <div class="card" v-for="project in allProjectPosts">
           <div class="thumbnail">
-            <!--<transition appear name="fade"><img class="thumbnail featured-image" :src="project.thumbnail" :alt="title"></transition>-->
+            <!--<transition appear name="fade"></transition>-->
           </div>
           <div class="info">
             <h2 class="title">{{project.title}}</h2>
             <p>{{project.description}}</p>
+            <a :href="project.source">Source Code</a>
+            <a :href="project.demo">Demo</a>
+            <p>{{project.technology}}</p>
+            <div class="stack">
+              <h2>Technologies used</h2>
+              <div class="stack-container">
+                <img v-for="tech in project.technology" class="stack-image" :src="tech" :alt="title">
+              </div>
+            </div>
+
           </div>
         </div>
     </section>
@@ -41,13 +51,15 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+  },
 
   computed: {
     allBlogPosts() {
       return this.$store.state.blogPosts;
     },
     allProjectPosts() {
+      debugger;
       return this.$store.state.projectPosts;
     },
     getLayout() {
@@ -154,6 +166,19 @@ if (this.$store.state.siteInfo.altlayout == false ) {
     cursor: pointer;
 }
 
+
+.stack {
+
+}
+
+.stack-container{
+  padding: 1rem;
+}
+
+.stack-image {
+  width: 4rem;
+  height: 4rem;
+}
 
 .browse a {
   width: 100%;
