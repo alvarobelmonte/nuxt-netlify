@@ -1,13 +1,18 @@
 {
-  "date": "Wednesday June 17th, 2020",
-  "title": "country",
-  "description": "aasd",
-  "source": "asd",
-  "demo": "asd",
-  "thumbnail": "/images/uploads/baeltype.png",
   "body": "dfdfg",
+  "demo": "asd",
+  "technologies": [
+    "/images/uploads/react.svg",
+    "/images/uploads/mongodb.svg",
+    "/images/uploads/material-ui-1.svg"
+  ],
+  "thumbnail": "/images/uploads/baeltype.png",
   "technology": [
     "/images/uploads/react.svg",
     "/images/uploads/material-ui-1.svg"
-  ]
+  ],
+  "date": "Wednesday June 17th, 2020",
+  "title": "country",
+  "source": "asd",
+  "description": "aasd"
 }
