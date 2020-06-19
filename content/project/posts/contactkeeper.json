@@ -7,7 +7,8 @@
   "thumbnail": "/images/uploads/contact.png",
   "technologies": [
     "/images/uploads/react.svg",
-    "/images/uploads/mongodb.svg"
+    "/images/uploads/mongodb.svg",
+    "/images/uploads/tachyons.png"
   ],
   "body": "..."
 }
