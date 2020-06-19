@@ -1,15 +1,22 @@
 {
-  "date": "Saturday June 13th, 2020",
-  "title": "Thingiverse redesign",
-  "description": "Thingiverse redesign bro",
-  "thumbnail": "/images/uploads/thingiverse.png",
   "body": "react, graphql",
+  "demo": "asd",
+  "technologies": [
+    "/images/uploads/react.svg",
+    "/images/uploads/mongodb.svg",
+    "/images/uploads/graphql.svg",
+    "/images/uploads/apollo.svg",
+    "/images/uploads/emotion.png"
+  ],
+  "thumbnail": "/images/uploads/thingiverse.png",
   "technology": [
     "/images/uploads/react.svg",
     "/images/uploads/mongodb.svg",
     "/images/uploads/graphql.svg",
     "/images/uploads/apollo.svg"
   ],
+  "date": "Saturday June 13th, 2020",
+  "title": "Thingiverse redesign",
   "source": "asd",
-  "demo": "asd"
+  "description": "Thingiverse redesign bro"
 }
