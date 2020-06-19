@@ -14,17 +14,18 @@
         <div class="card" v-for="project in allProjectPosts">
           <div class="thumbnail">
             <!--<transition appear name="fade"></transition>-->
+            <div :style="thumbnailCard(project.thumbnail)" ></div>
           </div>
           <div class="info">
             <h2 class="title">{{project.title}}</h2>
             <p>{{project.description}}</p>
             <a :href="project.source">Source Code</a>
             <a :href="project.demo">Demo</a>
-            <p>{{project.technology}}</p>
+
             <div class="stack">
               <h2>Technologies used</h2>
               <div class="stack-container">
-                <img v-for="tech in project.technology" class="stack-image" :src="tech" :alt="title">
+                <img v-for="tech in project.technologies" class="stack-image" :src="tech" :alt="tech">
               </div>
             </div>
 
@@ -52,6 +53,15 @@ export default {
     return {};
   },
   methods: {
+    thumbnailCard(thumb) {
+      return {
+        "width": "100%",
+        "height": "100%",
+        "background-image": "url("+thumb+")",
+        "background-size": "100%",
+        "background-repeat": "no-repeat"
+      }
+    },
   },
 
   computed: {
@@ -59,9 +69,9 @@ export default {
       return this.$store.state.blogPosts;
     },
     allProjectPosts() {
-      debugger;
       return this.$store.state.projectPosts;
     },
+
     getLayout() {
 if (this.$store.state.siteInfo.altlayout == false ) {
   return 'BaelGrid'
@@ -148,9 +158,7 @@ if (this.$store.state.siteInfo.altlayout == false ) {
 
   .thumbnail {
     flex: 50%;
-    background-image: url("https://www.lasnaves.com/wp-content/uploads/2015/07/React.js_logo.svg_.png");
-    background-size: contain;
-
+    background-color: transparent;
   }
 
   .info {

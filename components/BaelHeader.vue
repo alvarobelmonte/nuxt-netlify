@@ -96,7 +96,7 @@ export default {
   }
 };
 </script>
-<style>
+<style lang="scss">
 
 .social-item {
   margin: 0 0.5rem;
@@ -147,9 +147,13 @@ nav {
 .sitename {
   color: white;
   font-family: "Archivo Black", sans-serif;
-  text-transform: uppercase;
   font-weight: 400;
   font-size: 1.8rem;
+
+  &:hover {
+    color: white;
+    opacity: 85%;
+  }
 }
 
 .item {
