@@ -1,12 +1,15 @@
 {
-  "date": "Wednesday June 10th, 2020",
-  "title": "React Cocktail Context",
-  "description": "Demo react context",
-  "thumbnail": "/images/uploads/cocktail.png",
   "body": "a demods",
+  "demo": "https://polar-scrubland-44886.herokuapp.com/",
+  "technologies": [
+    "/images/uploads/react.svg"
+  ],
+  "thumbnail": "/images/uploads/cocktail.png",
   "technology": [
     "/images/uploads/react.svg"
   ],
+  "date": "Wednesday June 10th, 2020",
+  "title": "React Cocktail Context",
   "source": "https://github.com/alvarobelmonte/react-cocktail-context",
-  "demo": "https://polar-scrubland-44886.herokuapp.com/"
+  "description": "Demo react context"
 }
