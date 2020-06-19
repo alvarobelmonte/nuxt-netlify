@@ -1,0 +1,13 @@
+{
+  "date": "Friday June 19th, 2020",
+  "title": "ContactKeeper",
+  "description": "keep your contacts",
+  "source": "https://mern-contact-keeper.herokuapp.com/",
+  "demo": "https://mern-contact-keeper.herokuapp.com/",
+  "thumbnail": "/images/uploads/contact.png",
+  "technologies": [
+    "/images/uploads/react.svg",
+    "/images/uploads/mongodb.svg"
+  ],
+  "body": "..."
+}
