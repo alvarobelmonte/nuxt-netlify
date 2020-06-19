@@ -2,7 +2,8 @@
   "body": "a demods",
   "demo": "https://polar-scrubland-44886.herokuapp.com/",
   "technologies": [
-    "/images/uploads/react.svg"
+    "/images/uploads/react.svg",
+    "/images/uploads/tailwind.svg"
   ],
   "thumbnail": "/images/uploads/cocktail.png",
   "technology": [
