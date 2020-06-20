@@ -3,6 +3,6 @@
   "sitedescription": "Web Developer",
   "siteicon": "/images/uploads/icon.svg",
   "showmenu": true,
-  "emailsignup": true,
+  "emailsignup": false,
   "altlayout": false
 }
