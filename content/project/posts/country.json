@@ -14,5 +14,5 @@
   "date": "Wednesday June 3rd, 2020",
   "title": "Country Data",
   "source": "asd",
-  "description": "aasd"
+  "description": "Search a country and download its data into a PDF. Data fetched from REST Countries API."
 }
