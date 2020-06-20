@@ -18,5 +18,5 @@
   "date": "Thursday June 4th, 2020",
   "title": "Thingiverse redesign",
   "source": "asd",
-  "description": "A redesign of Thingiverse, a platform for 3D printing designs. I made this to test GraphQl using the [Thingiverse API](https://www.thingiverse.com/developers/rest-api-reference)"
+  "description": "A redesign of Thingiverse, a platform for 3D printing designs. I made this to test GraphQL using the Thingiverse API"
 }
