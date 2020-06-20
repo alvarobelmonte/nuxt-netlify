@@ -114,4 +114,8 @@ footer {
 .footer__heading {
     max-width: 100%;
 }
+
+a {
+    color: rgb(247, 255, 129);
+}
 </style>

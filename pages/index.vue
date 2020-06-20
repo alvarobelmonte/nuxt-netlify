@@ -7,28 +7,33 @@
               <source src="~/static/images/mine/video.webm" type="video/webm"> Your browser is not supported
             </video>
         </div>
+        <h1><b>Hi, I'm a <span class="fucsia">Web Developer</span>&#128187; based in <span class="fucsia"> Alicante</span>&#127796;</b></h1>
+          <div class="profile-picture">
+              <img src="~/static/images/uploads/profile.jpg" width="" height="" alt="Profile picture of Alvaro Belmonte." class="img">
+          </div>
 
     </div>
     <section class="portfolio">
-        <h1>PORTFOLIO</h1>
+        <h1>&#128193; PORTFOLIO</h1>
         <div class="card" v-for="project in allProjectPosts">
           <div class="thumbnail">
-            <!--<transition appear name="fade"></transition>-->
             <div :style="thumbnailCard(project.thumbnail)" ></div>
           </div>
           <div class="info">
-            <h2 class="title">{{project.title}}</h2>
-            <p>{{project.description}}</p>
-            <a :href="project.source">Source Code</a>
-            <a :href="project.demo">Demo</a>
-
-            <div class="stack">
-              <h2>Technologies used</h2>
-              <div class="stack-container">
-                <img v-for="tech in project.technologies" class="stack-image" :src="tech" :alt="tech">
+            <div class="info-content">
+              <h1 class="title">{{project.title}}</h1>
+              <p>{{project.description}}</p>
+              <div class="stack">
+                <h2>Technologies used</h2>
+                <div class="stack-container">
+                  <img v-for="tech in project.technologies" class="stack-image" :src="tech" :alt="tech">
+                </div>
               </div>
-            </div>
+              <a class="project-link" :href="project.source">Source Code</a>
+              <a class="project-link" :href="project.demo">Demo</a>
 
+
+            </div>
           </div>
         </div>
     </section>
@@ -58,8 +63,9 @@ export default {
         "width": "100%",
         "height": "100%",
         "background-image": "url("+thumb+")",
-        "background-size": "100%",
-        "background-repeat": "no-repeat"
+        //"background-size": "100%",
+        "background-repeat": "no-repeat",
+        "background-size": "100% 100%"
       }
     },
   },
@@ -97,7 +103,7 @@ if (this.$store.state.siteInfo.altlayout == false ) {
   overflow: hidden;
   display: none;
   visibility: hidden;*/
-  opacity: 0.65;
+  opacity: 0.35;
   &__content {
     height: 100%;
     width: 100%;
@@ -117,7 +123,13 @@ if (this.$store.state.siteInfo.altlayout == false ) {
     rgba(blue, 0.5),
     rgba(green, 0.5)
   );
-
+  
+  h1 {
+    text-align: center;
+    color: black;
+    background-color: white;
+    padding: 1rem;
+  }
 }
 
 .video {
@@ -144,7 +156,7 @@ if (this.$store.state.siteInfo.altlayout == false ) {
 .card {
   background-color:white;
   height: 25rem;
-  border-radius: 3rem;
+  border-radius: 1rem;
   width: 50%;
   margin: 2rem auto;
   display: flex;
@@ -162,10 +174,50 @@ if (this.$store.state.siteInfo.altlayout == false ) {
   }
 
   .info {
-    padding: 4rem 3rem;
+    padding: 2rem 3rem;
     flex: 50%;
+
+    .info-content {
+
+    }
+
+    .stack-container{
+      padding: 1rem;
+    }
+
+    .stack-image {
+      width: 2rem;
+      height: 2rem;
+      margin: 0.4rem;
+    }
+
+    .project-link {
+      text-align: center;
+      color: black;
+      padding: 0.4rem;
+      display: block;
+      border: 1px solid black;
+      margin: 0.5rem 0;
+
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
   }
 
+  h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.3rem;
+    background-color: black;
+    color: white;
+    border-radius: 0.6rem;
+    padding: 0.4rem;
+  }
+  h2 {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.1rem;
+  }
 
 }
 
@@ -174,19 +226,22 @@ if (this.$store.state.siteInfo.altlayout == false ) {
     cursor: pointer;
 }
 
+.fucsia {
+  color: rgb(255, 0, 157);
+}
 
-.stack {
+
+
+.profile-picture .img{
+  border-radius: 50%;
+  display: flex;
+  margin: 1rem auto;
+  width: 15rem;
+
 
 }
 
-.stack-container{
-  padding: 1rem;
-}
 
-.stack-image {
-  width: 4rem;
-  height: 4rem;
-}
 
 .browse a {
   width: 100%;

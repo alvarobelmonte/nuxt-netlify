@@ -1,25 +1,8 @@
 {
   "sitename": "Álvaro Belmonte",
-  "sitedescription": "Software Developer Portfolio",
+  "sitedescription": "Web Developer",
   "siteicon": "/images/uploads/icon.svg",
   "showmenu": true,
   "emailsignup": true,
-  "altlayout": false,
-  "menu": [
-    {
-      "name": "Linkedin",
-      "position": "1",
-      "link": "https://www.jake101.com/"
-    },
-    {
-      "name": "Behance",
-      "position": "2",
-      "link": "https://www.nuxtjs.org/"
-    },
-    {
-      "name": "Codepen",
-      "position": "3",
-      "link": "https://www.netlify.com/"
-    }
-  ]
+  "altlayout": false
 }
