@@ -14,11 +14,6 @@ import Footer from "~/components/Footer";
 import Header from "~/components/Header";
 
 export default {
-  data() {
-    return {
-      email: { email: "" }
-    };
-  },
 
   methods: {
     navHeight() {

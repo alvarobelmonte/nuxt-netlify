@@ -146,7 +146,7 @@ nav {
 }
 .sitename {
   color: white;
-  font-family: 'Sedgwick Ave', cursive;
+  font-family: 'Helvetica', cursive;
   padding-left: 2rem;
   font-weight: 400;
   font-size: 1.8rem;

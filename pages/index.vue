@@ -15,27 +15,7 @@
     </div>
     <section class="portfolio">
         <h1>&#128193; PORTFOLIO</h1>
-        <div class="card" v-for="project in allProjectPosts">
-          <div class="thumbnail">
-            <div :style="thumbnailCard(project.thumbnail)" ></div>
-          </div>
-          <div class="info">
-            <div class="info-content">
-              <h1 class="title">{{project.title}}</h1>
-              <p>{{project.description}}</p>
-              <div class="stack">
-                <h2>Technologies used</h2>
-                <div class="stack-container">
-                  <img v-for="tech in project.technologies" class="stack-image" :src="tech" :alt="tech">
-                </div>
-              </div>
-              <a class="project-link" :href="project.source">Source Code</a>
-              <a class="project-link" :href="project.demo">Demo</a>
-
-
-            </div>
-          </div>
-        </div>
+        <Card  :projects="allProjectPosts"/>
     </section>
 
     </main>
@@ -44,6 +24,8 @@
 <script>
 import BaelGrid from "~/components/BaelGrid";
 import FullGrid from "~/components/FullGrid";
+import Card from "~/components/Card";
+
 export default {
     watchQuery: ['page'],
 
@@ -53,23 +35,7 @@ export default {
     return +to.query.page > +from.query.page ? 'slide-right' : 'slide-left'
   },
   name: "Index",
-  components: { BaelGrid,FullGrid },
-  data() {
-    return {};
-  },
-  methods: {
-    thumbnailCard(thumb) {
-      return {
-        "width": "100%",
-        "height": "100%",
-        "background-image": "url("+thumb+")",
-        //"background-size": "100%",
-        "background-repeat": "no-repeat",
-        "background-size": "100% 100%"
-      }
-    },
-  },
-
+  components: { BaelGrid, FullGrid, Card },
   computed: {
     allBlogPosts() {
       return this.$store.state.blogPosts;
@@ -79,11 +45,11 @@ export default {
     },
 
     getLayout() {
-if (this.$store.state.siteInfo.altlayout == false ) {
-  return 'BaelGrid'
-} else if (this.$store.state.siteInfo.altlayout == true ) {
-  return 'FullGrid'
-}
+      if (this.$store.state.siteInfo.altlayout == false ) {
+        return 'BaelGrid'
+      } else if (this.$store.state.siteInfo.altlayout == true ) {
+        return 'FullGrid'
+      }
 
     }
   }
@@ -153,84 +119,9 @@ if (this.$store.state.siteInfo.altlayout == false ) {
   }
 }
 
-.card {
-  background-color:white;
-  height: 25rem;
-  border-radius: 1rem;
-  width: 50%;
-  margin: 2rem auto;
-  display: flex;
-  overflow: hidden;
-
-  transition: all 0.3s;
-
-  -webkit-box-shadow: 0 2rem 5rem rgba(0,0,0,.1);
-  -moz-box-shadow: 0 2rem 5rem rgba(0,0,0,.1);
-  box-shadow: 0 2rem 5rem rgba(0,0,0,.1);
-
-  .thumbnail {
-    flex: 50%;
-    background-color: transparent;
-  }
-
-  .info {
-    padding: 2rem 3rem;
-    flex: 50%;
-
-    .info-content {
-
-    }
-
-    .stack-container{
-      padding: 1rem;
-    }
-
-    .stack-image {
-      width: 2rem;
-      height: 2rem;
-      margin: 0.4rem;
-    }
-
-    .project-link {
-      text-align: center;
-      color: black;
-      padding: 0.4rem;
-      display: block;
-      border: 1px solid black;
-      margin: 0.5rem 0;
-
-      &:hover {
-        background-color: black;
-        color: white;
-      }
-    }
-  }
-
-  h1 {
-    font-family: 'Space Mono', monospace;
-    font-size: 1.3rem;
-    background-color: black;
-    color: white;
-    border-radius: 0.6rem;
-    padding: 0.4rem;
-  }
-  h2 {
-    font-family: 'Space Mono', monospace;
-    font-size: 1.1rem;
-  }
-
-}
-
-.card:hover {
-    transform: scale(1.02);
-    cursor: pointer;
-}
-
 .fucsia {
   color: rgb(255, 0, 157);
 }
-
-
 
 .profile-picture .img{
   border-radius: 50%;
@@ -240,7 +131,6 @@ if (this.$store.state.siteInfo.altlayout == false ) {
 
 
 }
-
 
 
 .browse a {
