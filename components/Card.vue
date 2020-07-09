@@ -15,7 +15,7 @@
                             <img v-for="tech in project.technologies" :key="tech.id" class="stack-image" :src="tech" :alt="tech">
                         </div>
                     </div>
-                    <a class="project-link" :href="project.source">Source Code</a>
+                    <a class="project-link" :href="project.source">Code</a>
                     <a class="project-link" :href="project.demo">Demo</a>
                 </div>
             </div>
@@ -76,7 +76,7 @@ export default {
     .title {
         font-family: 'Space Mono', monospace;
         font-size: 1.3rem;
-        background-color: black;
+        background-color: var(--color-primary);
         color: white;
         border-radius: 0.6rem;
         padding: 0.4rem;
@@ -103,14 +103,14 @@ export default {
 
     .project-link {
       text-align: center;
-      color: black;
+      color: var(--color-primary);
       padding: 0.4rem;
       display: block;
-      border: 1px solid black;
+      border: 1px solid var(--color-primary);
       margin: 0.5rem 0;
 
       &:hover {
-        background-color: black;
+        background-color: var(--color-primary);
         color: white;
       }
     }

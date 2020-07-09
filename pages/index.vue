@@ -92,7 +92,7 @@ export default {
   
   h1 {
     text-align: center;
-    color: black;
+    color: var(--color-primary);
     background-color: white;
     padding: 1rem;
   }
@@ -128,8 +128,6 @@ export default {
   display: flex;
   margin: 1rem auto;
   width: 15rem;
-
-
 }
 
 

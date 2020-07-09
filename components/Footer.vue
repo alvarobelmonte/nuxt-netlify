@@ -104,7 +104,7 @@ export default {
 
 <style scoped>
 footer {
-    background-color: black;
+    background-color: var(--color-primary);
     color: white;
 }
 .text-input {
