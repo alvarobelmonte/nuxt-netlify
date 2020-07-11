@@ -34,8 +34,7 @@ env: {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap',
-        rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap' }
     ]
   },
   css: ["@/assets/grid.css", "@/assets/css/variables.css", "bf-solid/dist/solid.latest.css"],

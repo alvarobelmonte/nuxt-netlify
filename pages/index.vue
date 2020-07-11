@@ -52,6 +52,13 @@ export default {
       }
 
     }
+  },
+  head () {
+    return {
+      link: [
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap' }
+      ]
+    }
   }
 };
 </script>
@@ -114,7 +121,7 @@ export default {
   h1 {
     text-align: center; 
     font-size: 3rem;
-    font-family: 'Space Mono', monospace;
+      font-family: 'Titillium Web', sans-serif;
     padding: 1rem;
   }
 }

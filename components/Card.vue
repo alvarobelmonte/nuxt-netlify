@@ -40,6 +40,13 @@ export default {
             "background-size": "100% 100%"
         }
         },
+    },
+    head () {
+        return {
+        link: [
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Ubuntu&display=swap' }
+        ]
+        }
     }
 };
 </script>
@@ -73,8 +80,9 @@ export default {
     padding: 1rem 3rem;
     flex: 1;
 
+
     .title {
-        font-family: 'Space Mono', monospace;
+        font-family: 'Ubuntu', sans-serif;
         font-size: 1.3rem;
         background-color: var(--color-primary);
         color: white;
@@ -82,7 +90,7 @@ export default {
         padding: 0.4rem;
     }
     .subtitle {
-        font-family: 'Space Mono', monospace;
+        font-family: 'Ubuntu', sans-serif;
         font-size: 1.1rem;
     }
 

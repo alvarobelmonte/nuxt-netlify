@@ -2,13 +2,13 @@
   <nav ref="navBar" id="navbar" class="">
     <div class="r">
 
-      <div class="c-4 xs-text-left xs-p2 flex flex-sitename">
+      <div class="c-4 xs-text-left xs-p1 flex flex-sitename">
         <div class="item">
           <nuxt-link class="sitename" to="/" exact>{{headerSiteName}}</nuxt-link>
         </div>
       </div>
 
-      <div class="c-4 xs-border-top sm-border-top-none xs-p2">
+      <div class="c-4 xs-border-top sm-border-top-none xs-p1">
         <div class="item xs-flex flex flex-social">
           <div class="social-item">
             <a href="https://www.linkedin.com/in/alvaro-belmonte">
@@ -93,6 +93,14 @@ export default {
     this.$on("searchChanged", results => {
       this.compResults = results;
     });
+  },
+
+  head () {
+    return {
+      link: [
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap' }
+      ]
+    }
   }
 };
 </script>
@@ -103,7 +111,7 @@ export default {
 }
 .social-icon {
   fill: white;
-  width: 3rem;
+  width: 2.8rem;
   transition: all 0.4s;
 }
 
@@ -146,7 +154,7 @@ nav {
 }
 .sitename {
   color: white;
-  font-family: 'Helvetica', cursive;
+  font-family: 'Titillium Web', sans-serif;
   padding-left: 2rem;
   font-weight: 400;
   font-size: 1.8rem;
@@ -173,10 +181,12 @@ a:hover {
   color: #ccc;
 }
 
-@media only screen and (max-width: 40rem) {
-  .results {
-    width: 94vw;
+@media only screen and (max-width: 54rem) {
+  .social-icon {
+    width: 1.5rem;
+  }
+  .sitename {
+    font-size: 1.1rem;
   }
 }
-
 </style>
