@@ -105,7 +105,12 @@ middleware: ['title']
     ** Run ESLint on save
     */
 
-  }
+  },
+  buildModules: [
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-172427596-1'
+    }]
+  ]
 }
 
 /**
