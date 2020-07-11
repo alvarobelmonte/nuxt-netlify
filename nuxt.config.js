@@ -38,7 +38,7 @@ env: {
         rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap' }
     ]
   },
-  css: ["@/assets/grid.css","bf-solid/dist/solid.latest.css"],
+  css: ["@/assets/grid.css", "@/assets/css/variables.css", "bf-solid/dist/solid.latest.css"],
   // icon: {
   //   iconSrc: `${siteInfo.siteicon}`
   //  },
