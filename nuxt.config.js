@@ -94,6 +94,9 @@ middleware: ['title']
   },{
     src: "~/plugins/lazyload",
     ssr: false
+  },{
+    src: '~plugins/ga.js', 
+    mode: 'client'
   }],
   /*
   ** Build configuration
@@ -104,12 +107,7 @@ middleware: ['title']
     ** Run ESLint on save
     */
 
-  },
-  buildModules: [
-    ['@nuxtjs/google-analytics', {
-      id: 'UA-172427596-1'
-    }]
-  ]
+  }
 }
 
 /**
