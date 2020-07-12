@@ -1,6 +1,6 @@
 {
   "body": "Search a country and download its data into a PDF. Data fetched from REST Countries API.",
-  "demo": "asd",
+  "demo": "https://react-country-data.netlify.app",
   "technologies": [
     "/images/uploads/react.svg",
     "/images/uploads/mongodb.svg",
@@ -13,6 +13,6 @@
   ],
   "date": "Wednesday June 3rd, 2020",
   "title": "Country Data",
-  "source": "asd",
+  "source": "https://github.com/alvarobelmonte/react-country-data",
   "description": "Search a country and download its data into a PDF. Data fetched from REST Countries API."
 }
