@@ -12,5 +12,5 @@
   "date": "Monday June 1st, 2020",
   "title": "React Cocktail Context",
   "source": "https://github.com/alvarobelmonte/react-cocktail-context",
-  "description": "Demo react context"
+  "description": "Search for drinks and get info about their characteristics and ingredients. The data is retrieved from TheCocktailDB. I created this app to learn about React and its Context API."
 }
