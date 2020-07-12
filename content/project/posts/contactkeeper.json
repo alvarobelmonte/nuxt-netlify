@@ -2,7 +2,7 @@
   "date": "Tuesday June 2nd, 2020",
   "title": "ContactKeeper",
   "description": "Create a list of your contacts.",
-  "source": "https://mern-contact-keeper.herokuapp.com/",
+  "source": "https://github.com/alvarobelmonte/mern-contact-keeper",
   "demo": "https://mern-contact-keeper.herokuapp.com/",
   "thumbnail": "/images/uploads/contact.png",
   "technologies": [
