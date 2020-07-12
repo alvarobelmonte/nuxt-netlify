@@ -1,5 +1,5 @@
 {
-  "body": "Search a country and download its data into a PDF. Data fetched from REST Countries API.",
+  "body": "Search a country and download its data in PDF format. Data is fetched from REST Countries API.",
   "demo": "https://react-country-data.netlify.app",
   "technologies": [
     "/images/uploads/react.svg",
