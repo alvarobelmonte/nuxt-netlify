@@ -14,5 +14,5 @@
   "date": "Wednesday June 3rd, 2020",
   "title": "Country Data",
   "source": "https://github.com/alvarobelmonte/react-country-data",
-  "description": "Search a country and download its data into a PDF. Data fetched from REST Countries API."
+  "description": "Search a country and download its data in PDF format. Data is fetched from REST Countries API."
 }
