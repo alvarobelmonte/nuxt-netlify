@@ -1,7 +1,7 @@
 {
   "date": "Tuesday June 2nd, 2020",
   "title": "ContactKeeper",
-  "description": "Create an account and admin your contacts and their info. You can log in with user **test123@gmail.com** and pass test123.",
+  "description": "Create an account and admin your contacts and their info. You can log in with user \"test123@gmail.com\" and pass \"test123\".",
   "source": "https://github.com/alvarobelmonte/mern-contact-keeper",
   "demo": "https://mern-contact-keeper.herokuapp.com/",
   "thumbnail": "/images/uploads/contact.png",
