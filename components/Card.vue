@@ -83,7 +83,7 @@ export default {
 
     .title {
         font-family: 'Ubuntu', sans-serif;
-        font-size: 1.3rem;
+        font-size: 1rem;
         background-color: var(--color-primary);
         color: white;
         border-radius: 0.6rem;
@@ -95,7 +95,7 @@ export default {
     }
 
     .description {
-        padding: 1rem 0;
+        padding: 0.3rem 0;
     }
 
 
@@ -159,6 +159,9 @@ export default {
       min-width: 2.4rem;
       min-height: 2.4rem;
       padding: 0.1rem;
+    }
+    .description {
+        padding: 1rem 0;
     }
 }
 
