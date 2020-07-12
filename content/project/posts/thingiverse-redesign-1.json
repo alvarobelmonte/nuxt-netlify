@@ -1,5 +1,5 @@
 {
-  "body": "A redesign of Thingiverse, a platform for 3D printing designs. I made this to test GraphQl using the [Thingiverse API](https://www.thingiverse.com/developers/rest-api-reference)",
+  "body": "A redesign of Thingiverse, a platform for 3D printing designs. I made this to test GraphQl using the [Thingiverse API](https://www.thingiverse.com/developers/rest-api-reference).",
   "demo": "https://thingiverse-redesign.netlify.app",
   "technologies": [
     "/images/uploads/react.svg",
