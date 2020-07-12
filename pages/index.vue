@@ -7,10 +7,11 @@
               <source src="~/static/images/mine/video.webm" type="video/webm"> Your browser is not supported
             </video>
         </div>
+
         <h1><b>Hi, I'm a <span class="fucsia">Web Developer</span>&#128187; based in <span class="fucsia"> Alicante</span>&#127796;</b></h1>
-          <div class="profile-picture">
-              <img src="~/static/images/uploads/profile.jpg" width="" height="" alt="Profile picture of Alvaro Belmonte." class="img">
-          </div>
+        <div class="profile-picture">
+            <img src="~/static/images/uploads/profile.jpg" width="" height="" alt="Profile picture of Alvaro Belmonte." class="img">
+        </div>
 
     </div>
     <section class="portfolio">
@@ -102,6 +103,7 @@ export default {
     color: var(--color-primary);
     background-color: white;
     padding: 1rem;
+    opacity: 1;
   }
 }
 

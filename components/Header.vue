@@ -186,7 +186,7 @@ a:hover {
     width: 1.5rem;
   }
   .sitename {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
 }
 </style>
