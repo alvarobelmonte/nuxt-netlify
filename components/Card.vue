@@ -56,7 +56,7 @@ export default {
 
 .card {
   background-color:white;
-  height: 35rem;
+  height: 38rem;
   border-radius: 1rem;
   width: 90%;
   margin: 2rem auto;
@@ -104,9 +104,9 @@ export default {
     }
 
     .stack-image {
-      width: 2.5rem;
-      height: 2.5rem;
-      margin: 0.4rem;
+      width: 2rem;
+      height: 2rem;
+      margin: 0.1rem;
     }
 
     .project-link {
@@ -132,6 +132,16 @@ export default {
   }
 }
 
+
+@media only screen and (min-width: 600px) {
+
+    .stack-image {
+      min-width: 4rem;
+      min-height: 4rem;
+      padding: 0.1rem;
+    }
+}
+
 @media only screen and (min-width: 1200px) {
     .card {
         width: 50%;
@@ -145,7 +155,11 @@ export default {
     .info {
         flex: 50%;
     }
-
+    .stack-image {
+      min-width: 2.4rem;
+      min-height: 2.4rem;
+      padding: 0.1rem;
+    }
 }
 
 </style>
