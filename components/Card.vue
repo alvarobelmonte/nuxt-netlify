@@ -73,7 +73,6 @@ export default {
   .thumbnail {
     min-height: 12rem;
     flex: 1;
-    background: red;
   }
 
   .info {
