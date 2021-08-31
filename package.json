@@ -1,8 +1,8 @@
 {
-  "name": "bael-cms-template",
+  "name": "alvarobelmonte-portfolio",
   "version": "0.1.2",
-  "description": "A fashionable brutalist blog template using Netlify CMS and Nuxt.js",
-  "author": "jake101 <hello@jake101.com>",
+  "description": "My protfolio",
+  "author": "alvarobelmonte",
   "scripts": {
     "dev": "nuxt",
     "serve": "nuxt",
