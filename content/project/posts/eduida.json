@@ -3,7 +3,8 @@
   "title": "Eduida",
   "demo": "www.eduida.es",
   "technologies": [
-    "/images/uploads/nuxt.svg"
+    "/images/uploads/nuxt.svg",
+    "/images/uploads/svg.logo.purple.dark.svg"
   ],
   "thumbnail": "/images/uploads/eduida-rec.png",
   "description": " Platform to learn English while palying games",
