@@ -1,13 +1,13 @@
 {
   "date": "Thursday September 2nd, 2021",
   "title": "Eduida",
-  "demo": "www.eduida.es",
+  "demo": "https://eduida.es/",
   "technologies": [
     "/images/uploads/nuxt.svg",
     "/images/uploads/svg.logo.purple.dark.svg"
   ],
   "thumbnail": "/images/uploads/eduida-rec.png",
   "description": " Platform for Spanish speakers to learn English while playing games. This is the biggest project I have built on my own.",
-  "source": "www.eduida.es",
+  "source": "https://eduida.es/",
   "body": " Platform for Spanish speakers to learn English while playing games. This is the biggest project I have built on my own."
 }
